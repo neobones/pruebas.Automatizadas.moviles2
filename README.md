@@ -15,7 +15,7 @@ Este proyecto contiene pruebas automatizadas para aplicaciones iOS (IPA) y Andro
 
 1. Clona este repositorio:
    ```
-   git clone https://github.com/tu-usuario/tu-repositorio.git
+   git clone https://github.com/neobones/pruebas.Automatizadas.moviles2.git
    cd tu-repositorio
    ```
 
@@ -26,7 +26,7 @@ Este proyecto contiene pruebas automatizadas para aplicaciones iOS (IPA) y Andro
 
 3. Instala Appium globalmente:
    ```
-   npm install -g appium
+   npm install appium
    ```
 
 4. Instala los drivers de Appium:
