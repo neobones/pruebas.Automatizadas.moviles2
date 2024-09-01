@@ -1,4 +1,4 @@
-exports.config = {
+export const config = {
     port: 4723,
     specs: [
         './tests/ios/**/*.js'

@@ -1,11 +1,11 @@
-const { remote } = require('webdriverio');
-const { assert } = require('chai');
+import { remote } from 'webdriverio';
+import { assert } from 'chai';
 
 describe('Android App Test', function() {
     let driver;
 
     before(async function() {
-        driver = await remote(require('../../config/android.conf').config);
+        driver = await remote(await import('../../config/android.conf.js').then(module => module.config));
     });
 
     it('should open the app', async function() {

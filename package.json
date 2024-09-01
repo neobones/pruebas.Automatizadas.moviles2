@@ -3,6 +3,7 @@
   "version": "1.0.0",
   "description": "",
   "main": "index.js",
+  "type": "module",
   "dependencies": {
     "appium": "^2.11.3",
     "appium-uiautomator2-driver": "^3.7.8",
@@ -13,8 +14,8 @@
     "webdriverio": "^9.0.7"
   },
   "scripts": {
-    "test:ios": "mocha tests/ios/**/*.js",
-    "test:android": "mocha tests/android/**/*.js"
+    "test:ios": "node --experimental-modules node_modules/.bin/mocha tests/ios/**/*.js",
+    "test:android": "node --experimental-modules node_modules/.bin/mocha tests/android/**/*.js"
   },
   "keywords": [],
   "author": "",

@@ -1,5 +1,5 @@
-const { remote } = require('webdriverio');
-const { assert } = require('chai');
+import { remote } from 'webdriverio';
+import { assert } from 'chai';
 
 describe('iOS App Test', function() {
     let driver;
