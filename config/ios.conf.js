@@ -7,11 +7,11 @@ export const config = {
         './tests/ios/**/*.js'
     ],
     capabilities: [{
-        "platformName": "iOS",
-        "appium:deviceName": "iPhone Simulator",
-        "appium:platformVersion": "14.0",
+        platformName: "iOS",
+        "appium:deviceName": "iPhone 14", // xcrun simctl list devices, para configurar es necesario poner la información exacta de tu pc
+        "appium:platformVersion": "16.2",
         "appium:automationName": "XCUITest",
-        "appium:app": "/path/to/your/app.ipa"
+        "appium:app": "com.apple.Preferences"
     }],
     logLevel: 'info',
     bail: 0,

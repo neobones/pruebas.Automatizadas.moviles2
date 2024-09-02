@@ -5,9 +5,9 @@
   "main": "index.js",
   "type": "module",
   "dependencies": {
+    "@wdio/cli": "^9.0.7",
     "appium": "^2.11.3",
-    "appium-uiautomator2-driver": "^3.7.8",
-    "appium-xcuitest-driver": "^7.25.0",
+    "appium-uiautomator2-driver": "^2.29.11",
     "chai": "^5.1.1",
     "mocha": "^10.7.3",
     "tslib": "^2.7.0",
@@ -19,5 +19,8 @@
   },
   "keywords": [],
   "author": "",
-  "license": "ISC"
+  "license": "ISC",
+  "devDependencies": {
+    "appium-xcuitest-driver": "^4.35.0"
+  }
 }
