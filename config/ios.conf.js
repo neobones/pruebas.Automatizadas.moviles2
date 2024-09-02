@@ -8,22 +8,33 @@ export const config = {
     ],
     capabilities: [{
         platformName: "iOS",
-        "appium:deviceName": "iPhone 14", // xcrun simctl list devices, para configurar es necesario poner la información exacta de tu pc
+        "appium:deviceName": "iPhone 14",
         "appium:platformVersion": "16.2",
         "appium:automationName": "XCUITest",
-        "appium:app": "com.apple.Preferences"
+        "appium:app": "com.apple.Preferences",
+        "appium:newCommandTimeout": 300,
+        "appium:wdaLaunchTimeout": 120000,
+        "appium:wdaConnectionTimeout": 120000
     }],
+    reporters: [
+        'spec',
+        ['allure', {
+            outputDir: 'allure-results',
+            disableWebdriverStepsReporting: true,
+            disableWebdriverScreenshotsReporting: false,
+        }]
+    ],
     logLevel: 'info',
     bail: 0,
     baseUrl: 'http://localhost',
-    waitforTimeout: 10000,
-    connectionRetryTimeout: 120000,
-    connectionRetryCount: 3,
+    waitforTimeout: 30000,
+    connectionRetryTimeout: 300000,
+    connectionRetryCount: 5,
     services: ['appium'],
     framework: 'mocha',
     reporters: ['spec'],
     mochaOpts: {
         ui: 'bdd',
-        timeout: 60000
+        timeout: 600000
     },
 };

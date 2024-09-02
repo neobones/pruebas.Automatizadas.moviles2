@@ -11,16 +11,21 @@
     "chai": "^5.1.1",
     "mocha": "^10.7.3",
     "tslib": "^2.7.0",
-    "webdriverio": "^9.0.7"
+    "webdriverio": "^7.30.0"
   },
   "scripts": {
     "test:ios": "node --experimental-modules node_modules/.bin/mocha tests/ios/**/*.js",
-    "test:android": "node --experimental-modules node_modules/.bin/mocha tests/android/**/*.js"
+    "test:android": "node --experimental-modules node_modules/.bin/mocha tests/android/**/*.js",
+    "report:generate": "allure generate allure-results --clean",
+    "report:open": "allure open",
+    "test:ios:report": "npm run test:ios && npm run report:generate && npm run report:open"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "Juan Pablo Melinao González",
+  "license": "MIT",
   "devDependencies": {
+    "@wdio/allure-reporter": "^9.0.4",
+    "allure-commandline": "^2.30.0",
     "appium-xcuitest-driver": "^4.35.0"
   }
 }
