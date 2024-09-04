@@ -17,8 +17,8 @@
     "test:ios": "node --experimental-modules node_modules/.bin/mocha tests/ios/**/*.js",
     "test:android": "node --experimental-modules node_modules/.bin/mocha tests/android/**/*.js",
     "report:generate": "allure generate allure-results --clean",
-    "report:open": "allure open",
-    "test:ios:report": "npm run test:ios && npm run report:generate && npm run report:open"
+    "report:open": "allure open allure-report",
+    "test:ios:report": "npm run test:ios || true && npm run report:generate && npm run report:open"
   },
   "keywords": [],
   "author": "Juan Pablo Melinao González",

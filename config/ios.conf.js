@@ -14,7 +14,9 @@ export const config = {
         "appium:app": "com.apple.Preferences",
         "appium:newCommandTimeout": 300,
         "appium:wdaLaunchTimeout": 120000,
-        "appium:wdaConnectionTimeout": 120000
+        "appium:wdaConnectionTimeout": 120000,
+        "appium:fullReset": false,
+        "appium:noReset": true,
     }],
     reporters: [
         'spec',
@@ -32,7 +34,6 @@ export const config = {
     connectionRetryCount: 5,
     services: ['appium'],
     framework: 'mocha',
-    reporters: ['spec'],
     mochaOpts: {
         ui: 'bdd',
         timeout: 600000
